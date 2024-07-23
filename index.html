@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.549">
+
+  <meta name="author" content=" Dirección Nacional de Planeación y EstadísticaOficina Nacional de Estadística   UNIVERSIDAD NACIONAL DE COLOMBIA Julio de 2024 ">
+  <title> TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL DE COLOMBIA </title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto.css">
+  <link rel="stylesheet" href="_extensions/InseeFrLab/onyxia/logo.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="index_files/libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="index_files/libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="index_files/libs/jquery-3.5.1/jquery.min.js"></script>
+  <script src="index_files/libs/proj4js-2.3.15/proj4.js"></script>
+  <link href="index_files/libs/highcharts-9.3.1/css/motion.css" rel="stylesheet">
+  <script src="index_files/libs/highcharts-9.3.1/highcharts.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/highcharts-3d.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/highcharts-more.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/stock.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/map.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/data.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/exporting.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/offline-exporting.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/drilldown.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/item-series.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/overlapping-datalabels.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/annotations.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/export-data.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/funnel.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/heatmap.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/treemap.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/sankey.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/dependency-wheel.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/organization.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/solid-gauge.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/streamgraph.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/sunburst.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/vector.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/wordcloud.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/xrange.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/tilemap.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/venn.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/gantt.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/timeline.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/parallel-coordinates.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/bullet.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/coloraxis.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/dumbbell.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/lollipop.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/series-label.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/plugins/motion.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/custom/reset.js"></script>
+  <script src="index_files/libs/highcharts-9.3.1/modules/boost.js"></script>
+  <script src="index_files/libs/highchart-binding-0.9.4/highchart.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-image="_extensions/InseeFrLab/onyxia/background.svg" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title"><p style="text-align:center; line-height:40%"><br>
+<font size="+4">TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL DE COLOMBIA</font><br>
+</p></h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<p style="text-align:center; line-height:100%"><br>
+<font size="+3"><b><br>Dirección Nacional de Planeación y Estadística</b><br><br>Oficina Nacional de Estadística</font><br>
+</p><br>
+<p style="text-align:center; line-height:120%"><br>
+<font size="+3">UNIVERSIDAD NACIONAL DE COLOMBIA<br>Julio de 2024</font><br>
+</p> 
+</div>
+</div>
+</div>
+
+</section>
+<section class="slide level2">
+
+<h3 data-background-image="background.svg" data-background-size="contain" id="contenido-de-la-presentación">Contenido de la Presentación</h3>
+<p><br></p>
+<p style="font-size:85%;">
+</p><p>Esta presentación contiene las principales <b>tendencias estadísticas</b> de la <a href="https://unal.edu.co/">Universidad Nacional de Colombia - UNAL</a> durante los <b>últimos 15 años.</b><br><br> Específicamente, se presenta información a nivel de cifras relacionadas con las principales tendencias poblacionales de la UNAL, el comportamiento y evolución de los programas académicos, la evolución poblacional en materia de genero/sexo, una breve aproximación a la medición de la discapacidad, el comportamiento de la inclusión dentro de la Universidad, Bienestar Universitario en su dimensión económica, algunas características de la calidad en la institución, las cifras de deserción en pregado, el costo de la formación por estudiante, así como cifras relacionadas con los rankings.</p>
+</section>
+<section id="tendencias-generales" class="slide level2 center" data-background-image="background.svg" data-background-size="contain">
+<h2>TENDENCIAS GENERALES</h2>
+</section>
+<section class="slide level2">
+
+<h3 data-background-image="background.svg" data-background-size="contain" id="aspirantes-y-admitidos">Aspirantes y Admitidos</h3>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Aspirantes</a></li><li><a href="#tabset-1-2">Nivel</a></li><li><a href="#tabset-1-3">Sedes</a></li><li><a href="#tabset-1-4">Admitidos</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<center>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-6da818fae13cb52abdbd" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-6da818fae13cb52abdbd">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"datetime","zoomType":"x"},"title":{"text":"Evolución total de aspirantes a la UNAL","style":{"fontWeight":"bold","fontSize":"22px","color":"#333333","useHTML":true}},"yAxis":{"title":{"text":"Total aspirantes","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"type":"linear","reversed":false,"lineColor":"#787878","opposite":false,"lineWidth":1,"min":0,"max":null,"labels":{"format":"{value}","style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"credits":{"enabled":false},"exporting":{"enabled":true,"filename":"PlotSeries_Poblacion"},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"line":{"marker":{"enabled":false,"symbol":"square","radius":1}}},"series":[{"name":"Aspirantes","data":[{"Fecha":"2008-1","Clase":"Aspirantes","Y":62293,"Extra":100,"y":62293,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Aspirantes","Y":39809,"Extra":100,"y":39809,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Aspirantes","Y":61728,"Extra":100,"y":61728,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Aspirantes","Y":40448,"Extra":100,"y":40448,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Aspirantes","Y":73870,"Extra":100,"y":73870,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Aspirantes","Y":43455,"Extra":100,"y":43455,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Aspirantes","Y":78309,"Extra":100,"y":78309,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Aspirantes","Y":48683,"Extra":100,"y":48683,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Aspirantes","Y":79386,"Extra":100,"y":79386,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Aspirantes","Y":38583,"Extra":100,"y":38583,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Aspirantes","Y":75781,"Extra":100,"y":75781,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Aspirantes","Y":45708,"Extra":100,"y":45708,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Aspirantes","Y":74296,"Extra":100,"y":74296,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Aspirantes","Y":42819,"Extra":100,"y":42819,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Aspirantes","Y":70930,"Extra":100,"y":70930,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Aspirantes","Y":45532,"Extra":100,"y":45532,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Aspirantes","Y":75526,"Extra":100,"y":75526,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Aspirantes","Y":43096,"Extra":100,"y":43096,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Aspirantes","Y":79539,"Extra":100,"y":79539,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Aspirantes","Y":47359,"Extra":100,"y":47359,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Aspirantes","Y":75840,"Extra":100,"y":75840,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Aspirantes","Y":48188,"Extra":100,"y":48188,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Aspirantes","Y":82854,"Extra":100,"y":82854,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Aspirantes","Y":44108,"Extra":100,"y":44108,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Aspirantes","Y":70211,"Extra":100,"y":70211,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Aspirantes","Y":43331,"Extra":100,"y":43331,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Aspirantes","Y":64932,"Extra":100,"y":64932,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Aspirantes","Y":23468,"Extra":100,"y":23468,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Aspirantes","Y":50195,"Extra":100,"y":50195,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Aspirantes","Y":21335,"Extra":100,"y":21335,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Aspirantes","Y":62266,"Extra":100,"y":62266,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Aspirantes","Y":33829,"Extra":100,"y":33829,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Aspirantes","Y":60298,"Extra":100,"y":60298,"name":"2024-1"}],"type":"line","color":"blue","zoomType":{"enabled":false},"resetZoomButton":true}],"xAxis":{"type":"category","title":{"text":"Periodo","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"categories":["2008-1","2008-2","2009-1","2009-2","2010-1","2010-2","2011-1","2011-2","2012-1","2012-2","2013-1","2013-2","2014-1","2014-2","2015-1","2015-2","2016-1","2016-2","2017-1","2017-2","2018-1","2018-2","2019-1","2019-2","2020-1","2020-2","2021-1","2021-2","2022-1","2022-2","2023-1","2023-2","2024-1"],"align":"center","lineColor":"#787878","opposite":false,"labels":{"style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"legend":{"enabled":true,"align":"center","verticalAlign":"bottom","layout":"horizontal","title":{"text":"","style":{"textDecoration":"underline"}},"x":42,"y":0,"itemStyle":{"fontWeight":"bold","color":"black","fontSize":"18px"}},"tooltip":{"crosshairs":true,"shared":true,"pointFormat":"<span style=\"color:{series.color}\">● <\/span><b>{series.name}: {point.y}<\/b> ({point.Extra}%)<br/>","backgroundColor":"rgba(186,174,174,0.7)","borderColor":"#6D6666","borderWidth":5,"useHTML":true}},"theme":{"chart":{"plotBackgroundColor":"#EBEBEB","style":{"color":"#000000","fontFamily":"Arial, sans-serif"}},"colors":["#595959","#F8766D","#A3A500","#00BF7D","#00B0F6","#E76BF3"],"xAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"yAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"legendBackgroundColor":"rgba(0, 0, 0, 0.5)","background2":"#505053","dataLabelsColor":"#B0B0B3","textColor":"#C0C0C0","contrastTextColor":"#F0F0F3","maskColor":"rgba(255,255,255,0.3)"},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Menú Contextual del Gráfico","decimalPoint":".","downloadCSV":"Descargar CSV","downloadJPEG":"Descargar imagen JPEG","downloadPDF":"Descargar documento PDF","downloadPNG":"Descargar imagen PNG","downloadSVG":"Descargar imagen vectorial SVG","downloadXLS":"Descargar XLS","drillUpText":"<< Volver a {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Cargando...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No hay información para mostrar","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Imprimir gráfico","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"Ver tabla de datos","viewFullscreen":"Ver en pantalla completa","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Arial","debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</center>
+</div>
+<div id="tabset-1-2">
+<center>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-890ab09cd07d1359e327" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-890ab09cd07d1359e327">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"datetime","zoomType":"x"},"title":{"text":"Evolución total de aspirantes a la UNAL por nivel de formación","style":{"fontWeight":"bold","fontSize":"22px","color":"#333333","useHTML":true}},"yAxis":{"title":{"text":"Total aspirantes","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"type":"linear","reversed":false,"lineColor":"#787878","opposite":false,"lineWidth":1,"min":0,"max":null,"labels":{"format":"{value}","style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"credits":{"enabled":false},"exporting":{"enabled":true,"filename":"PlotSeries_NIVEL"},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"line":{"marker":{"enabled":false,"symbol":"square","radius":1}}},"series":[{"name":"Doctorado","data":[{"Fecha":"2008-1","Clase":"Doctorado","Y":189,"Extra":0.3,"y":189,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Doctorado","Y":217,"Extra":0.5,"y":217,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Doctorado","Y":187,"Extra":0.3,"y":187,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Doctorado","Y":294,"Extra":0.7,"y":294,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Doctorado","Y":276,"Extra":0.4,"y":276,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Doctorado","Y":330,"Extra":0.8,"y":330,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Doctorado","Y":278,"Extra":0.4,"y":278,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Doctorado","Y":235,"Extra":0.5,"y":235,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Doctorado","Y":289,"Extra":0.4,"y":289,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Doctorado","Y":278,"Extra":0.7,"y":278,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Doctorado","Y":279,"Extra":0.4,"y":279,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Doctorado","Y":231,"Extra":0.5,"y":231,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Doctorado","Y":286,"Extra":0.4,"y":286,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Doctorado","Y":451,"Extra":1.1,"y":451,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Doctorado","Y":310,"Extra":0.4,"y":310,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Doctorado","Y":332,"Extra":0.7,"y":332,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Doctorado","Y":311,"Extra":0.4,"y":311,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Doctorado","Y":244,"Extra":0.6,"y":244,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Doctorado","Y":748,"Extra":0.9,"y":748,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Doctorado","Y":207,"Extra":0.4,"y":207,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Doctorado","Y":362,"Extra":0.5,"y":362,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Doctorado","Y":215,"Extra":0.4,"y":215,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Doctorado","Y":263,"Extra":0.3,"y":263,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Doctorado","Y":367,"Extra":0.8,"y":367,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Doctorado","Y":383,"Extra":0.5,"y":383,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Doctorado","Y":144,"Extra":0.3,"y":144,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Doctorado","Y":239,"Extra":0.4,"y":239,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Doctorado","Y":135,"Extra":0.6,"y":135,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Doctorado","Y":181,"Extra":0.4,"y":181,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Doctorado","Y":85,"Extra":0.4,"y":85,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Doctorado","Y":261,"Extra":0.4,"y":261,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Doctorado","Y":261,"Extra":0.8,"y":261,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Doctorado","Y":201,"Extra":0.3,"y":201,"name":"2024-1"}],"type":"line","color":"#ff7f00","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Especialidades médicas","data":[{"Fecha":"2008-1","Clase":"Especialidades médicas","Y":1785,"Extra":2.9,"y":1785,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Especialidades médicas","Y":18,"Extra":0,"y":18,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Especialidades médicas","Y":2329,"Extra":3.8,"y":2329,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Especialidades médicas","Y":16,"Extra":0,"y":16,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Especialidades médicas","Y":2910,"Extra":3.9,"y":2910,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Especialidades médicas","Y":38,"Extra":0.1,"y":38,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Especialidades médicas","Y":3069,"Extra":3.9,"y":3069,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Especialidades médicas","Y":438,"Extra":0.9,"y":438,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Especialidades médicas","Y":2767,"Extra":3.5,"y":2767,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Especialidades médicas","Y":512,"Extra":1.3,"y":512,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Especialidades médicas","Y":2566,"Extra":3.4,"y":2566,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Especialidades médicas","Y":679,"Extra":1.5,"y":679,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Especialidades médicas","Y":3009,"Extra":4.1,"y":3009,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Especialidades médicas","Y":638,"Extra":1.5,"y":638,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Especialidades médicas","Y":3032,"Extra":4.3,"y":3032,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Especialidades médicas","Y":438,"Extra":1,"y":438,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Especialidades médicas","Y":3159,"Extra":4.2,"y":3159,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Especialidades médicas","Y":415,"Extra":1,"y":415,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Especialidades médicas","Y":3770,"Extra":4.7,"y":3770,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Especialidades médicas","Y":503,"Extra":1.1,"y":503,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Especialidades médicas","Y":3148,"Extra":4.2,"y":3148,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Especialidades médicas","Y":710,"Extra":1.5,"y":710,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Especialidades médicas","Y":3613,"Extra":4.4,"y":3613,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Especialidades médicas","Y":567,"Extra":1.3,"y":567,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Especialidades médicas","Y":3884,"Extra":5.5,"y":3884,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Especialidades médicas","Y":369,"Extra":0.9,"y":369,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Especialidades médicas","Y":2978,"Extra":4.6,"y":2978,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Especialidades médicas","Y":1144,"Extra":4.9,"y":1144,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Especialidades médicas","Y":3048,"Extra":6.1,"y":3048,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Especialidades médicas","Y":700,"Extra":3.3,"y":700,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Especialidades médicas","Y":2766,"Extra":4.4,"y":2766,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Especialidades médicas","Y":425,"Extra":1.3,"y":425,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Especialidades médicas","Y":3075,"Extra":5.1,"y":3075,"name":"2024-1"}],"type":"line","color":"#377eb8","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Especialización","data":[{"Fecha":"2008-1","Clase":"Especialización","Y":1172,"Extra":1.9,"y":1172,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Especialización","Y":621,"Extra":1.6,"y":621,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Especialización","Y":1099,"Extra":1.8,"y":1099,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Especialización","Y":1007,"Extra":2.5,"y":1007,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Especialización","Y":1403,"Extra":1.9,"y":1403,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Especialización","Y":695,"Extra":1.6,"y":695,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Especialización","Y":1407,"Extra":1.8,"y":1407,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Especialización","Y":1140,"Extra":2.3,"y":1140,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Especialización","Y":1159,"Extra":1.5,"y":1159,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Especialización","Y":1061,"Extra":2.7,"y":1061,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Especialización","Y":1319,"Extra":1.7,"y":1319,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Especialización","Y":1544,"Extra":3.4,"y":1544,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Especialización","Y":1132,"Extra":1.5,"y":1132,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Especialización","Y":1134,"Extra":2.6,"y":1134,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Especialización","Y":1405,"Extra":2,"y":1405,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Especialización","Y":1365,"Extra":3,"y":1365,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Especialización","Y":1551,"Extra":2.1,"y":1551,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Especialización","Y":1375,"Extra":3.2,"y":1375,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Especialización","Y":1627,"Extra":2,"y":1627,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Especialización","Y":1415,"Extra":3,"y":1415,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Especialización","Y":1701,"Extra":2.2,"y":1701,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Especialización","Y":1250,"Extra":2.6,"y":1250,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Especialización","Y":1203,"Extra":1.5,"y":1203,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Especialización","Y":1456,"Extra":3.3,"y":1456,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Especialización","Y":1703,"Extra":2.4,"y":1703,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Especialización","Y":1105,"Extra":2.6,"y":1105,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Especialización","Y":1240,"Extra":1.9,"y":1240,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Especialización","Y":1083,"Extra":4.6,"y":1083,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Especialización","Y":1181,"Extra":2.4,"y":1181,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Especialización","Y":931,"Extra":4.4,"y":931,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Especialización","Y":1314,"Extra":2.1,"y":1314,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Especialización","Y":930,"Extra":2.7,"y":930,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Especialización","Y":973,"Extra":1.6,"y":973,"name":"2024-1"}],"type":"line","color":"#006d2c","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Maestría","data":[{"Fecha":"2008-1","Clase":"Maestría","Y":1969,"Extra":3.2,"y":1969,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Maestría","Y":1302,"Extra":3.3,"y":1302,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Maestría","Y":2111,"Extra":3.4,"y":2111,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Maestría","Y":1958,"Extra":4.8,"y":1958,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Maestría","Y":2798,"Extra":3.8,"y":2798,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Maestría","Y":1959,"Extra":4.5,"y":1959,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Maestría","Y":2924,"Extra":3.7,"y":2924,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Maestría","Y":2128,"Extra":4.4,"y":2128,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Maestría","Y":3170,"Extra":4,"y":3170,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Maestría","Y":1924,"Extra":5,"y":1924,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Maestría","Y":2815,"Extra":3.7,"y":2815,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Maestría","Y":2105,"Extra":4.6,"y":2105,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Maestría","Y":2814,"Extra":3.8,"y":2814,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Maestría","Y":1957,"Extra":4.6,"y":1957,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Maestría","Y":2863,"Extra":4,"y":2863,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Maestría","Y":2038,"Extra":4.5,"y":2038,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Maestría","Y":2799,"Extra":3.7,"y":2799,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Maestría","Y":2204,"Extra":5.1,"y":2204,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Maestría","Y":2667,"Extra":3.4,"y":2667,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Maestría","Y":1994,"Extra":4.2,"y":1994,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Maestría","Y":2220,"Extra":2.9,"y":2220,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Maestría","Y":1825,"Extra":3.8,"y":1825,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Maestría","Y":2094,"Extra":2.5,"y":2094,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Maestría","Y":1874,"Extra":4.2,"y":1874,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Maestría","Y":2357,"Extra":3.4,"y":2357,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Maestría","Y":1248,"Extra":2.9,"y":1248,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Maestría","Y":1746,"Extra":2.7,"y":1746,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Maestría","Y":1155,"Extra":4.9,"y":1155,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Maestría","Y":1239,"Extra":2.5,"y":1239,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Maestría","Y":794,"Extra":3.7,"y":794,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Maestría","Y":1349,"Extra":2.2,"y":1349,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Maestría","Y":1118,"Extra":3.3,"y":1118,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Maestría","Y":1482,"Extra":2.5,"y":1482,"name":"2024-1"}],"type":"line","color":"#984ea3","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Pregrado","data":[{"Fecha":"2008-1","Clase":"Pregrado","Y":57178,"Extra":91.8,"y":57178,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Pregrado","Y":37651,"Extra":94.59999999999999,"y":37651,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Pregrado","Y":56002,"Extra":90.7,"y":56002,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Pregrado","Y":37173,"Extra":91.90000000000001,"y":37173,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Pregrado","Y":66483,"Extra":90,"y":66483,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Pregrado","Y":40433,"Extra":93,"y":40433,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Pregrado","Y":70631,"Extra":90.2,"y":70631,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Pregrado","Y":44742,"Extra":91.90000000000001,"y":44742,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Pregrado","Y":72001,"Extra":90.7,"y":72001,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Pregrado","Y":34808,"Extra":90.2,"y":34808,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Pregrado","Y":68802,"Extra":90.8,"y":68802,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Pregrado","Y":41149,"Extra":90,"y":41149,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Pregrado","Y":67055,"Extra":90.3,"y":67055,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Pregrado","Y":38639,"Extra":90.2,"y":38639,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Pregrado","Y":63320,"Extra":89.3,"y":63320,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Pregrado","Y":41359,"Extra":90.8,"y":41359,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Pregrado","Y":67706,"Extra":89.59999999999999,"y":67706,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Pregrado","Y":38858,"Extra":90.2,"y":38858,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Pregrado","Y":70727,"Extra":88.90000000000001,"y":70727,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Pregrado","Y":43240,"Extra":91.3,"y":43240,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Pregrado","Y":68409,"Extra":90.2,"y":68409,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Pregrado","Y":44188,"Extra":91.7,"y":44188,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Pregrado","Y":75681,"Extra":91.3,"y":75681,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Pregrado","Y":39844,"Extra":90.3,"y":39844,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Pregrado","Y":61884,"Extra":88.09999999999999,"y":61884,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Pregrado","Y":40465,"Extra":93.40000000000001,"y":40465,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Pregrado","Y":58729,"Extra":90.40000000000001,"y":58729,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Pregrado","Y":19951,"Extra":85,"y":19951,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Pregrado","Y":44546,"Extra":88.7,"y":44546,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Pregrado","Y":18825,"Extra":88.2,"y":18825,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Pregrado","Y":56576,"Extra":90.90000000000001,"y":56576,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Pregrado","Y":31095,"Extra":91.90000000000001,"y":31095,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Pregrado","Y":54567,"Extra":90.5,"y":54567,"name":"2024-1"}],"type":"line","color":"#e41a1c","zoomType":{"enabled":false},"resetZoomButton":true}],"xAxis":{"type":"category","title":{"text":"Periodo","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"categories":["2008-1","2008-2","2009-1","2009-2","2010-1","2010-2","2011-1","2011-2","2012-1","2012-2","2013-1","2013-2","2014-1","2014-2","2015-1","2015-2","2016-1","2016-2","2017-1","2017-2","2018-1","2018-2","2019-1","2019-2","2020-1","2020-2","2021-1","2021-2","2022-1","2022-2","2023-1","2023-2","2024-1"],"align":"center","lineColor":"#787878","opposite":false,"labels":{"style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"legend":{"enabled":true,"align":"center","verticalAlign":"bottom","layout":"horizontal","title":{"text":"","style":{"textDecoration":"underline"}},"x":42,"y":0,"itemStyle":{"fontWeight":"bold","color":"black","fontSize":"18px"}},"tooltip":{"crosshairs":true,"shared":true,"pointFormat":"<span style=\"color:{series.color}\">● <\/span><b>{series.name}: {point.y}<\/b> ({point.Extra}%)<br/>","backgroundColor":"rgba(186,174,174,0.7)","borderColor":"#6D6666","borderWidth":5,"useHTML":true}},"theme":{"chart":{"plotBackgroundColor":"#EBEBEB","style":{"color":"#000000","fontFamily":"Arial, sans-serif"}},"colors":["#595959","#F8766D","#A3A500","#00BF7D","#00B0F6","#E76BF3"],"xAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"yAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"legendBackgroundColor":"rgba(0, 0, 0, 0.5)","background2":"#505053","dataLabelsColor":"#B0B0B3","textColor":"#C0C0C0","contrastTextColor":"#F0F0F3","maskColor":"rgba(255,255,255,0.3)"},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Menú Contextual del Gráfico","decimalPoint":".","downloadCSV":"Descargar CSV","downloadJPEG":"Descargar imagen JPEG","downloadPDF":"Descargar documento PDF","downloadPNG":"Descargar imagen PNG","downloadSVG":"Descargar imagen vectorial SVG","downloadXLS":"Descargar XLS","drillUpText":"<< Volver a {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Cargando...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No hay información para mostrar","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Imprimir gráfico","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"Ver tabla de datos","viewFullscreen":"Ver en pantalla completa","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Arial","debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</center>
+</div>
+<div id="tabset-1-3">
+<center>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-07444e4c4bb427c4e8c7" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-07444e4c4bb427c4e8c7">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"datetime","zoomType":"x"},"title":{"text":"Evolución total de aspirantes a la UNAL por sedes","style":{"fontWeight":"bold","fontSize":"22px","color":"#333333","useHTML":true}},"yAxis":{"title":{"text":"Total aspirantes","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"type":"linear","reversed":false,"lineColor":"#787878","opposite":false,"lineWidth":1,"min":0,"max":null,"labels":{"format":"{value}","style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"credits":{"enabled":false},"exporting":{"enabled":true,"filename":"PlotSeries_INS_SEDE_NOMBRE"},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"line":{"marker":{"enabled":false,"symbol":"square","radius":1}}},"series":[{"name":"Amazonía","data":[{"Fecha":"2015-1","Clase":"Amazonía","Y":471,"Extra":0.7,"y":471,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Amazonía","Y":344,"Extra":0.8,"y":344,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Amazonía","Y":462,"Extra":0.6,"y":462,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Amazonía","Y":242,"Extra":0.6,"y":242,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Amazonía","Y":752,"Extra":0.9,"y":752,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Amazonía","Y":377,"Extra":0.8,"y":377,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Amazonía","Y":783,"Extra":1,"y":783,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Amazonía","Y":845,"Extra":1.8,"y":845,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Amazonía","Y":966,"Extra":1.2,"y":966,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Amazonía","Y":315,"Extra":0.7,"y":315,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Amazonía","Y":844,"Extra":1.2,"y":844,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Amazonía","Y":679,"Extra":1.6,"y":679,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Amazonía","Y":588,"Extra":0.9,"y":588,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Amazonía","Y":449,"Extra":1.9,"y":449,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Amazonía","Y":748,"Extra":1.5,"y":748,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Amazonía","Y":281,"Extra":1.3,"y":281,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Amazonía","Y":1061,"Extra":1.7,"y":1061,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Amazonía","Y":545,"Extra":1.6,"y":545,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Amazonía","Y":973,"Extra":1.6,"y":973,"name":"2024-1"}],"type":"line","color":"#4d4d4d","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Bogotá","data":[{"Fecha":"2015-1","Clase":"Bogotá","Y":52763,"Extra":74.40000000000001,"y":52763,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Bogotá","Y":34170,"Extra":75,"y":34170,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Bogotá","Y":54784,"Extra":72.5,"y":54784,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Bogotá","Y":31796,"Extra":73.8,"y":31796,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Bogotá","Y":57864,"Extra":72.7,"y":57864,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Bogotá","Y":34853,"Extra":73.59999999999999,"y":34853,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Bogotá","Y":53733,"Extra":70.90000000000001,"y":53733,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Bogotá","Y":33775,"Extra":70.09999999999999,"y":33775,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Bogotá","Y":57489,"Extra":69.40000000000001,"y":57489,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Bogotá","Y":31918,"Extra":72.40000000000001,"y":31918,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Bogotá","Y":49832,"Extra":71,"y":49832,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Bogotá","Y":29589,"Extra":68.3,"y":29589,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Bogotá","Y":48457,"Extra":74.59999999999999,"y":48457,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Bogotá","Y":15356,"Extra":65.40000000000001,"y":15356,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Bogotá","Y":36100,"Extra":71.90000000000001,"y":36100,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Bogotá","Y":14191,"Extra":66.5,"y":14191,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Bogotá","Y":47340,"Extra":76,"y":47340,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Bogotá","Y":25484,"Extra":75.3,"y":25484,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Bogotá","Y":43123,"Extra":71.5,"y":43123,"name":"2024-1"}],"type":"line","color":"#1f78b4","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Caribe","data":[{"Fecha":"2015-1","Clase":"Caribe","Y":198,"Extra":0.3,"y":198,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Caribe","Y":41,"Extra":0.1,"y":41,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Caribe","Y":235,"Extra":0.3,"y":235,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Caribe","Y":117,"Extra":0.3,"y":117,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Caribe","Y":185,"Extra":0.2,"y":185,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Caribe","Y":129,"Extra":0.3,"y":129,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Caribe","Y":209,"Extra":0.3,"y":209,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Caribe","Y":118,"Extra":0.2,"y":118,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Caribe","Y":260,"Extra":0.3,"y":260,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Caribe","Y":100,"Extra":0.2,"y":100,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Caribe","Y":198,"Extra":0.3,"y":198,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Caribe","Y":100,"Extra":0.2,"y":100,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Caribe","Y":216,"Extra":0.3,"y":216,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Caribe","Y":70,"Extra":0.3,"y":70,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Caribe","Y":166,"Extra":0.3,"y":166,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Caribe","Y":75,"Extra":0.4,"y":75,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Caribe","Y":173,"Extra":0.3,"y":173,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Caribe","Y":100,"Extra":0.3,"y":100,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Caribe","Y":215,"Extra":0.4,"y":215,"name":"2024-1"}],"type":"line","color":"#1b7837","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"De La Paz","data":[{"Fecha":"2019-2","Clase":"De La Paz","Y":685,"Extra":1.6,"y":685,"name":"2019-2"},{"Fecha":"2020-1","Clase":"De La Paz","Y":559,"Extra":0.8,"y":559,"name":"2020-1"},{"Fecha":"2020-2","Clase":"De La Paz","Y":797,"Extra":1.8,"y":797,"name":"2020-2"},{"Fecha":"2021-1","Clase":"De La Paz","Y":712,"Extra":1.1,"y":712,"name":"2021-1"},{"Fecha":"2021-2","Clase":"De La Paz","Y":538,"Extra":2.3,"y":538,"name":"2021-2"},{"Fecha":"2022-1","Clase":"De La Paz","Y":442,"Extra":0.9,"y":442,"name":"2022-1"},{"Fecha":"2022-2","Clase":"De La Paz","Y":492,"Extra":2.3,"y":492,"name":"2022-2"},{"Fecha":"2023-1","Clase":"De La Paz","Y":504,"Extra":0.8,"y":504,"name":"2023-1"},{"Fecha":"2023-2","Clase":"De La Paz","Y":371,"Extra":1.1,"y":371,"name":"2023-2"},{"Fecha":"2024-1","Clase":"De La Paz","Y":325,"Extra":0.5,"y":325,"name":"2024-1"}],"type":"line","color":"#33a02c","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Manizales","data":[{"Fecha":"2015-1","Clase":"Manizales","Y":2553,"Extra":3.6,"y":2553,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Manizales","Y":1990,"Extra":4.4,"y":1990,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Manizales","Y":2913,"Extra":3.9,"y":2913,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Manizales","Y":2184,"Extra":5.1,"y":2184,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Manizales","Y":2946,"Extra":3.7,"y":2946,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Manizales","Y":2348,"Extra":5,"y":2348,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Manizales","Y":2600,"Extra":3.4,"y":2600,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Manizales","Y":2123,"Extra":4.4,"y":2123,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Manizales","Y":2794,"Extra":3.4,"y":2794,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Manizales","Y":1867,"Extra":4.2,"y":1867,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Manizales","Y":2481,"Extra":3.5,"y":2481,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Manizales","Y":1839,"Extra":4.2,"y":1839,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Manizales","Y":1978,"Extra":3,"y":1978,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Manizales","Y":1244,"Extra":5.3,"y":1244,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Manizales","Y":1515,"Extra":3,"y":1515,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Manizales","Y":1031,"Extra":4.8,"y":1031,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Manizales","Y":1822,"Extra":2.9,"y":1822,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Manizales","Y":1326,"Extra":3.9,"y":1326,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Manizales","Y":2150,"Extra":3.6,"y":2150,"name":"2024-1"}],"type":"line","color":"#fb9a99","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Medellín","data":[{"Fecha":"2015-1","Clase":"Medellín","Y":9211,"Extra":13,"y":9211,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Medellín","Y":5754,"Extra":12.6,"y":5754,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Medellín","Y":10274,"Extra":13.6,"y":10274,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Medellín","Y":5432,"Extra":12.6,"y":5432,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Medellín","Y":9737,"Extra":12.2,"y":9737,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Medellín","Y":5333,"Extra":11.3,"y":5333,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Medellín","Y":9943,"Extra":13.1,"y":9943,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Medellín","Y":6307,"Extra":13.1,"y":6307,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Medellín","Y":10728,"Extra":12.9,"y":10728,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Medellín","Y":4412,"Extra":10,"y":4412,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Medellín","Y":8579,"Extra":12.2,"y":8579,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Medellín","Y":5012,"Extra":11.6,"y":5012,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Medellín","Y":7288,"Extra":11.2,"y":7288,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Medellín","Y":3254,"Extra":13.9,"y":3254,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Medellín","Y":5812,"Extra":11.6,"y":5812,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Medellín","Y":2699,"Extra":12.7,"y":2699,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Medellín","Y":7307,"Extra":11.7,"y":7307,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Medellín","Y":3768,"Extra":11.1,"y":3768,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Medellín","Y":9264,"Extra":15.4,"y":9264,"name":"2024-1"}],"type":"line","color":"#e31a1c","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Orinoquía","data":[{"Fecha":"2015-1","Clase":"Orinoquía","Y":806,"Extra":1.1,"y":806,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Orinoquía","Y":269,"Extra":0.6,"y":269,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Orinoquía","Y":460,"Extra":0.6,"y":460,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Orinoquía","Y":306,"Extra":0.7,"y":306,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Orinoquía","Y":2002,"Extra":2.5,"y":2002,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Orinoquía","Y":843,"Extra":1.8,"y":843,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Orinoquía","Y":1557,"Extra":2.1,"y":1557,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Orinoquía","Y":1167,"Extra":2.4,"y":1167,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Orinoquía","Y":2040,"Extra":2.5,"y":2040,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Orinoquía","Y":1387,"Extra":3.1,"y":1387,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Orinoquía","Y":1585,"Extra":2.3,"y":1585,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Orinoquía","Y":1222,"Extra":2.8,"y":1222,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Orinoquía","Y":1558,"Extra":2.4,"y":1558,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Orinoquía","Y":680,"Extra":2.9,"y":680,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Orinoquía","Y":1183,"Extra":2.4,"y":1183,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Orinoquía","Y":656,"Extra":3.1,"y":656,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Orinoquía","Y":1354,"Extra":2.2,"y":1354,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Orinoquía","Y":1040,"Extra":3.1,"y":1040,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Orinoquía","Y":1035,"Extra":1.7,"y":1035,"name":"2024-1"}],"type":"line","color":"#ffff33","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Palmira","data":[{"Fecha":"2015-1","Clase":"Palmira","Y":1029,"Extra":1.5,"y":1029,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Palmira","Y":1135,"Extra":2.5,"y":1135,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Palmira","Y":1149,"Extra":1.5,"y":1149,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Palmira","Y":1076,"Extra":2.5,"y":1076,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Palmira","Y":1053,"Extra":1.3,"y":1053,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Palmira","Y":1018,"Extra":2.1,"y":1018,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Palmira","Y":1097,"Extra":1.4,"y":1097,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Palmira","Y":923,"Extra":1.9,"y":923,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Palmira","Y":1268,"Extra":1.5,"y":1268,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Palmira","Y":835,"Extra":1.9,"y":835,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Palmira","Y":824,"Extra":1.2,"y":824,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Palmira","Y":909,"Extra":2.1,"y":909,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Palmira","Y":661,"Extra":1,"y":661,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Palmira","Y":499,"Extra":2.1,"y":499,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Palmira","Y":425,"Extra":0.8,"y":425,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Palmira","Y":436,"Extra":2,"y":436,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Palmira","Y":911,"Extra":1.5,"y":911,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Palmira","Y":764,"Extra":2.3,"y":764,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Palmira","Y":1498,"Extra":2.5,"y":1498,"name":"2024-1"}],"type":"line","color":"#ff7f00","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Tumaco","data":[{"Fecha":"2015-1","Clase":"Tumaco","Y":493,"Extra":0.7,"y":493,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Tumaco","Y":662,"Extra":1.5,"y":662,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Tumaco","Y":1270,"Extra":1.7,"y":1270,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Tumaco","Y":668,"Extra":1.6,"y":668,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Tumaco","Y":1108,"Extra":1.4,"y":1108,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Tumaco","Y":966,"Extra":2,"y":966,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Tumaco","Y":2115,"Extra":2.8,"y":2115,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Tumaco","Y":1262,"Extra":2.6,"y":1262,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Tumaco","Y":3548,"Extra":4.3,"y":3548,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Tumaco","Y":957,"Extra":2.2,"y":957,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Tumaco","Y":1725,"Extra":2.5,"y":1725,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Tumaco","Y":1474,"Extra":3.4,"y":1474,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Tumaco","Y":1206,"Extra":1.9,"y":1206,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Tumaco","Y":510,"Extra":2.2,"y":510,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Tumaco","Y":1650,"Extra":3.3,"y":1650,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Tumaco","Y":675,"Extra":3.2,"y":675,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Tumaco","Y":1794,"Extra":2.9,"y":1794,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Tumaco","Y":431,"Extra":1.3,"y":431,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Tumaco","Y":1387,"Extra":2.3,"y":1387,"name":"2024-1"}],"type":"line","color":"#cab2d6","zoomType":{"enabled":false},"resetZoomButton":true},{"name":"Universidad","data":[{"Fecha":"2015-1","Clase":"Universidad","Y":3406,"Extra":4.8,"y":3406,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Universidad","Y":1167,"Extra":2.6,"y":1167,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Universidad","Y":3979,"Extra":5.3,"y":3979,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Universidad","Y":1275,"Extra":3,"y":1275,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Universidad","Y":3892,"Extra":4.9,"y":3892,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Universidad","Y":1492,"Extra":3.2,"y":1492,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Universidad","Y":3803,"Extra":5,"y":3803,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Universidad","Y":1668,"Extra":3.5,"y":1668,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Universidad","Y":3761,"Extra":4.5,"y":3761,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Universidad","Y":1632,"Extra":3.7,"y":1632,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Universidad","Y":3584,"Extra":5.1,"y":3584,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Universidad","Y":1710,"Extra":3.9,"y":1710,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Universidad","Y":2268,"Extra":3.5,"y":2268,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Universidad","Y":868,"Extra":3.7,"y":868,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Universidad","Y":2154,"Extra":4.3,"y":2154,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Universidad","Y":799,"Extra":3.7,"y":799,"name":"2022-2"},{"Fecha":"2024-1","Clase":"Universidad","Y":328,"Extra":0.5,"y":328,"name":"2024-1"}],"type":"line","color":"#6a3d9a","zoomType":{"enabled":false},"resetZoomButton":true}],"xAxis":{"type":"category","title":{"text":"Periodo","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"categories":["2015-1","2015-2","2016-1","2016-2","2017-1","2017-2","2018-1","2018-2","2019-1","2019-2","2020-1","2020-2","2021-1","2021-2","2022-1","2022-2","2023-1","2023-2","2024-1"],"align":"center","lineColor":"#787878","opposite":false,"labels":{"style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"legend":{"enabled":true,"align":"center","verticalAlign":"bottom","layout":"horizontal","title":{"text":"","style":{"textDecoration":"underline"}},"x":42,"y":0,"itemStyle":{"fontWeight":"bold","color":"black","fontSize":"18px"}},"tooltip":{"crosshairs":true,"shared":true,"pointFormat":"<span style=\"color:{series.color}\">● <\/span><b>{series.name}: {point.y}<\/b> ({point.Extra}%)<br/>","backgroundColor":"rgba(186,174,174,0.7)","borderColor":"#6D6666","borderWidth":5,"useHTML":true}},"theme":{"chart":{"plotBackgroundColor":"#EBEBEB","style":{"color":"#000000","fontFamily":"Arial, sans-serif"}},"colors":["#595959","#F8766D","#A3A500","#00BF7D","#00B0F6","#E76BF3"],"xAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"yAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"legendBackgroundColor":"rgba(0, 0, 0, 0.5)","background2":"#505053","dataLabelsColor":"#B0B0B3","textColor":"#C0C0C0","contrastTextColor":"#F0F0F3","maskColor":"rgba(255,255,255,0.3)"},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Menú Contextual del Gráfico","decimalPoint":".","downloadCSV":"Descargar CSV","downloadJPEG":"Descargar imagen JPEG","downloadPDF":"Descargar documento PDF","downloadPNG":"Descargar imagen PNG","downloadSVG":"Descargar imagen vectorial SVG","downloadXLS":"Descargar XLS","drillUpText":"<< Volver a {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Cargando...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No hay información para mostrar","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Imprimir gráfico","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"Ver tabla de datos","viewFullscreen":"Ver en pantalla completa","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Arial","debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</center>
+</div>
+<div id="tabset-1-4">
+<center>
+<div class="cell">
+<div class="cell-output-display">
+<div class="highchart html-widget html-fill-item" id="htmlwidget-10475695638c3e0be9ea" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-10475695638c3e0be9ea">{"x":{"hc_opts":{"chart":{"reflow":true,"type":"datetime","zoomType":"x"},"title":{"text":"Evolución total de admitidos en la UNAL","style":{"fontWeight":"bold","fontSize":"22px","color":"#333333","useHTML":true}},"yAxis":{"title":{"text":"Total admitidos","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"type":"linear","reversed":false,"lineColor":"#787878","opposite":false,"lineWidth":1,"min":0,"max":null,"labels":{"format":"{value}","style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"credits":{"enabled":false},"exporting":{"enabled":true,"filename":"PlotSeries_Poblacion"},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}},"line":{"marker":{"enabled":false,"symbol":"square","radius":1}}},"series":[{"name":"Admitidos","data":[{"Fecha":"2008-1","Clase":"Admitidos","Y":7634,"Extra":100,"y":7634,"name":"2008-1"},{"Fecha":"2008-2","Clase":"Admitidos","Y":6857,"Extra":100,"y":6857,"name":"2008-2"},{"Fecha":"2009-1","Clase":"Admitidos","Y":7783,"Extra":100,"y":7783,"name":"2009-1"},{"Fecha":"2009-2","Clase":"Admitidos","Y":7582,"Extra":100,"y":7582,"name":"2009-2"},{"Fecha":"2010-1","Clase":"Admitidos","Y":9265,"Extra":100,"y":9265,"name":"2010-1"},{"Fecha":"2010-2","Clase":"Admitidos","Y":7579,"Extra":100,"y":7579,"name":"2010-2"},{"Fecha":"2011-1","Clase":"Admitidos","Y":9483,"Extra":100,"y":9483,"name":"2011-1"},{"Fecha":"2011-2","Clase":"Admitidos","Y":7804,"Extra":100,"y":7804,"name":"2011-2"},{"Fecha":"2012-1","Clase":"Admitidos","Y":9223,"Extra":100,"y":9223,"name":"2012-1"},{"Fecha":"2012-2","Clase":"Admitidos","Y":7382,"Extra":100,"y":7382,"name":"2012-2"},{"Fecha":"2013-1","Clase":"Admitidos","Y":8930,"Extra":100,"y":8930,"name":"2013-1"},{"Fecha":"2013-2","Clase":"Admitidos","Y":7285,"Extra":100,"y":7285,"name":"2013-2"},{"Fecha":"2014-1","Clase":"Admitidos","Y":8150,"Extra":100,"y":8150,"name":"2014-1"},{"Fecha":"2014-2","Clase":"Admitidos","Y":7855,"Extra":100,"y":7855,"name":"2014-2"},{"Fecha":"2015-1","Clase":"Admitidos","Y":9131,"Extra":100,"y":9131,"name":"2015-1"},{"Fecha":"2015-2","Clase":"Admitidos","Y":7907,"Extra":100,"y":7907,"name":"2015-2"},{"Fecha":"2016-1","Clase":"Admitidos","Y":9442,"Extra":100,"y":9442,"name":"2016-1"},{"Fecha":"2016-2","Clase":"Admitidos","Y":8148,"Extra":100,"y":8148,"name":"2016-2"},{"Fecha":"2017-1","Clase":"Admitidos","Y":9540,"Extra":100,"y":9540,"name":"2017-1"},{"Fecha":"2017-2","Clase":"Admitidos","Y":8225,"Extra":100,"y":8225,"name":"2017-2"},{"Fecha":"2018-1","Clase":"Admitidos","Y":9972,"Extra":100,"y":9972,"name":"2018-1"},{"Fecha":"2018-2","Clase":"Admitidos","Y":8336,"Extra":100,"y":8336,"name":"2018-2"},{"Fecha":"2019-1","Clase":"Admitidos","Y":9038,"Extra":100,"y":9038,"name":"2019-1"},{"Fecha":"2019-2","Clase":"Admitidos","Y":8477,"Extra":100,"y":8477,"name":"2019-2"},{"Fecha":"2020-1","Clase":"Admitidos","Y":9802,"Extra":100,"y":9802,"name":"2020-1"},{"Fecha":"2020-2","Clase":"Admitidos","Y":7655,"Extra":100,"y":7655,"name":"2020-2"},{"Fecha":"2021-1","Clase":"Admitidos","Y":8927,"Extra":100,"y":8927,"name":"2021-1"},{"Fecha":"2021-2","Clase":"Admitidos","Y":7901,"Extra":100,"y":7901,"name":"2021-2"},{"Fecha":"2022-1","Clase":"Admitidos","Y":8584,"Extra":100,"y":8584,"name":"2022-1"},{"Fecha":"2022-2","Clase":"Admitidos","Y":7593,"Extra":100,"y":7593,"name":"2022-2"},{"Fecha":"2023-1","Clase":"Admitidos","Y":8260,"Extra":100,"y":8260,"name":"2023-1"},{"Fecha":"2023-2","Clase":"Admitidos","Y":7316,"Extra":100,"y":7316,"name":"2023-2"},{"Fecha":"2024-1","Clase":"Admitidos","Y":9075,"Extra":100,"y":9075,"name":"2024-1"}],"type":"line","color":"blue","zoomType":{"enabled":false},"resetZoomButton":true}],"xAxis":{"type":"category","title":{"text":"Periodo","offset":70,"style":{"fontWeight":"bold","fontSize":"18px","color":"black"}},"categories":["2008-1","2008-2","2009-1","2009-2","2010-1","2010-2","2011-1","2011-2","2012-1","2012-2","2013-1","2013-2","2014-1","2014-2","2015-1","2015-2","2016-1","2016-2","2017-1","2017-2","2018-1","2018-2","2019-1","2019-2","2020-1","2020-2","2021-1","2021-2","2022-1","2022-2","2023-1","2023-2","2024-1"],"align":"center","lineColor":"#787878","opposite":false,"labels":{"style":{"fontWeight":"bold","color":"black","fontSize":"18px"}}},"legend":{"enabled":true,"align":"center","verticalAlign":"bottom","layout":"horizontal","title":{"text":"","style":{"textDecoration":"underline"}},"x":42,"y":0,"itemStyle":{"fontWeight":"bold","color":"black","fontSize":"18px"}},"tooltip":{"crosshairs":true,"shared":true,"pointFormat":"<span style=\"color:{series.color}\">● <\/span><b>{series.name}: {point.y}<\/b> ({point.Extra}%)<br/>","backgroundColor":"rgba(186,174,174,0.7)","borderColor":"#6D6666","borderWidth":5,"useHTML":true}},"theme":{"chart":{"plotBackgroundColor":"#EBEBEB","style":{"color":"#000000","fontFamily":"Arial, sans-serif"}},"colors":["#595959","#F8766D","#A3A500","#00BF7D","#00B0F6","#E76BF3"],"xAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"yAxis":{"labels":{"style":{"color":"#666666"}},"title":{"style":{"color":"#000000"}},"startOnTick":false,"endOnTick":false,"gridLineColor":"#FFFFFF","gridLineWidth":1.5,"tickWidth":1.5,"tickLength":5,"tickColor":"#666666","minorTickInterval":0,"minorGridLineColor":"#FFFFFF","minorGridLineWidth":0.5},"legendBackgroundColor":"rgba(0, 0, 0, 0.5)","background2":"#505053","dataLabelsColor":"#B0B0B3","textColor":"#C0C0C0","contrastTextColor":"#F0F0F3","maskColor":"rgba(255,255,255,0.3)"},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Menú Contextual del Gráfico","decimalPoint":".","downloadCSV":"Descargar CSV","downloadJPEG":"Descargar imagen JPEG","downloadPDF":"Descargar documento PDF","downloadPNG":"Descargar imagen PNG","downloadSVG":"Descargar imagen vectorial SVG","downloadXLS":"Descargar XLS","drillUpText":"<< Volver a {series.name}","exitFullscreen":"Exit from full screen","exportData":{"annotationHeader":"Annotations","categoryDatetimeHeader":"DateTime","categoryHeader":"Category"},"hideData":"Hide data table","invalidDate":null,"loading":"Cargando...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No hay información para mostrar","numericSymbolMagnitude":1000,"numericSymbols":["k","M","G","T","P","E"],"printChart":"Imprimir gráfico","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"shortWeekdays":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"thousandsSep":" ","viewData":"Ver tabla de datos","viewFullscreen":"Ver en pantalla completa","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":"Arial","debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</center>
+</div>
+</div>
+</div>
+</section>
+<section id="gracias" class="slide level2 center" data-background-image="background.svg" data-background-size="contain">
+<h2>¡Gracias!</h2>
+</section>
+<section id="opciones-navegación-presentación" class="slide level2" data-background-image="background.svg" data-background-size="contain">
+<h2>Opciones Navegación Presentación</h2>
+<ul>
+<li>Pantalla completa: dar clic en tecla f y, para salir, dar clic en tecla Esc.</li>
+<li>Última diapositiva: dar clic en Shift + cursor derecho.</li>
+<li>Primera diapositiva: dar clic en Shift + cursor izquierdo.</li>
+<li>Activar y desactivar lienzo de notas: utilice la tecla C.</li>
+<li>Activar y desactivar pizarra: utilice la tecla B.</li>
+<li>Borrar notas: utilice la tecla DEL o Supr.</li>
+<li>Colores pincel: hacia adelante, utilice la tecla X.</li>
+<li>Colores pincel: hacia atrás, utilice la tecla Y.</li>
+</ul>
+<p>Más información en <a href="https://quarto.org/docs/presentations/revealjs/presenting.html#navigation-options" target="_blank">Opciones de Navegación</a> manual Quarto.</p>
+<div class="quarto-auto-generated-content">
+<p><img src="Imagenes/logoun.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1300,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>
