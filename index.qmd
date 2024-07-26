@@ -1,6 +1,8 @@
 ---
-title: <p style="text-align:center; line-height:40%"><font size="+4">TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL DE COLOMBIA</font></p>
-author: <p style="text-align:center; line-height:100%"><font size="+3"><b></br>Dirección Nacional de Planeación y Estadística</b><br><br>Oficina Nacional de Estadística</font></p><p style="text-align:center; line-height:120%"><font size="+3">UNIVERSIDAD NACIONAL DE COLOMBIA<br>Julio de 2024</font></p>
+title: TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL DE COLOMBIA
+subtitle: <br><b>Dirección Nacional de Planeación y Estadística</b> <br><br> Oficina Nacional de Estadística<br>
+author: <br>UNIVERSIDAD NACIONAL DE COLOMBIA
+date: 07/24/2024
 format:
   onyxia-revealjs:
     code-fold: true
@@ -8,9 +10,9 @@ format:
     chalkboard: true
     slide-number: true
     preview-links: auto
-    logo: "Imagenes/logoun.png"
-width: 1300
-editor: visual
+    logo: "logoun.png"
+    footer: "UNAL"
+width: 1200
 ---
 
 ```{r}
@@ -28,23 +30,21 @@ library(RColorBrewer)
 library(readxl)
 ```
 
-
 ### Contenido de la Presentación
 
 <br>
-
-<p style="font-size:85%;">
 
 Esta presentación contiene las principales <b>tendencias estadísticas</b> de la [Universidad Nacional de Colombia - UNAL](https://unal.edu.co/) durante los <b>últimos 15 años.</b><br><br> Específicamente, se presenta información a nivel de cifras relacionadas con las principales tendencias poblacionales de la UNAL, el comportamiento y evolución de los programas académicos, la evolución poblacional en materia de genero/sexo, una breve aproximación a la medición de la discapacidad, el comportamiento de la inclusión dentro de la Universidad, Bienestar Universitario en su dimensión económica, algunas características de la calidad en la institución, las cifras de deserción en pregado, el costo de la formación por estudiante, así como cifras relacionadas con los rankings.
 
 
 ## TENDENCIAS GENERALES {.center}
 
----
+------------------------------------------------------------------------
 
 ### Aspirantes y Admitidos
 
 ::: panel-tabset
+
 ### Aspirantes
 
 <center>
@@ -138,15 +138,13 @@ Plot.Series(
 ```
 
 </center>
-
 :::
 
-
----
+------------------------------------------------------------------------
 
 ## ¡Gracias! {.center}
 
----
+------------------------------------------------------------------------
 
 ## Opciones Navegación Presentación
 
