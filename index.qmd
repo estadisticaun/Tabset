@@ -1,5 +1,5 @@
 ---
-title: <p style="text-align:center; line-height:40%"><font size="+4">TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL DE COLOMBIA</font></p>
+title: <p style="text-align:center; line-height:40%"><font size="+4">TENDENCIAS ESTADÍSTICAS UNIVERSIDAD NACIONAL <br><br><br> DE COLOMBIA</font></p>
 author: <p style="text-align:center; line-height:100%"><font size="+3"><b></br>Dirección Nacional de Planeación y Estadística</b><br><br>Oficina Nacional de Estadística</font></p><p style="text-align:center; line-height:120%"><font size="+3">UNIVERSIDAD NACIONAL DE COLOMBIA<br>Julio de 2024</font></p>
 format:
   onyxia-revealjs:
