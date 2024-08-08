@@ -48,3 +48,8 @@ $border-radius: 3px;
 $presentation-block-margin:	12px;
 $presentation-slide-text-align:	left;
 $presentation-title-slide-text-align:	center;
+
+/*-- Texto Justificado --*/
+p {
+    text-align: justify;
+}
