@@ -45,6 +45,7 @@ Esta presentación contiene las principales <b>tendencias estadísticas</b> de l
 
 ### Aspirantes
 
+<br>
 <center>
 
 ```{r}
